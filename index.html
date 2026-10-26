@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moonfall Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+  </head>
+  <body class="text-[1.125rem]">
+    <div id="bgLayer" class="bg-layer night-normal"></div>
+    <div class="overlay"></div>
+
+    <div class="petals" aria-hidden="true">
+      <span></span><span></span><span></span><span></span> <span></span
+      ><span></span><span></span><span></span>
+    </div>
+
+    <main class="page px-6 py-6" >
+      <header class="site-header">
+        <h1 class="site-title text-[2.4rem 7vw 4rem]">Moonfall Weather</h1>
+        <p class="site-subtitle mt-2.5 mb-12">Check the weather, anywhere.</p>
+      </header>
+
+      <form id="searchForm" class="search-form">
+        <input
+          type="text"
+          id="cityInput"
+          class="search-input text-[1.2rem] px-3.5 py-3.5"
+          placeholder="Enter a city name..."
+          autocomplete="off"
+        />
+        <button type="submit" id="searchBtn" class="search-btn px-0 py-7.5">Search</button>
+      </form>
+
+      <section id="resultCard" class="result-card px-7.5 py-12 mt-12" hidden>
+        <p class="result-city mb-2.5" id="resultCity">City, Country</p>
+        <p class="result-temp mb-1.5" id="resultTemp">--°C</p>
+        <p class="result-condition" id="resultCondition">Condition</p>
+      </section>
+
+      <p id="statusText" class="status-text mt-6.5"></p>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
